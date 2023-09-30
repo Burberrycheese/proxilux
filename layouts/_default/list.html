@@ -1,0 +1,45 @@
+{{define "main"}}
+<!--Hero section-->
+<section class="inner-hero d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-md-6 text-center">
+        <h2>Our Services</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quod?
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Values Section ======= -->
+<section id="values" class="values">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <h2>Our Services</h2>
+      <p>Odit est perspiciatis laborum et dicta</p>
+    </header>
+
+    <div class="row">
+      {{ range .RegularPages}}
+      <div
+        class="col-lg-4 mt-4 mt-lg-0"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
+        <div class="box">
+          <h3>{{.Title}}</h3>
+          {{with .Params.hero}}
+          <p>{{.description}}</p>
+          {{end}}
+          <br />
+          <a href="{{.Permalink}}">Read More</a>
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</section>
+<!-- End Values Section -->
+{{end}}

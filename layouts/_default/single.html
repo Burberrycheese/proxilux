@@ -1,0 +1,26 @@
+{{define "main"}}
+<!--Hero section-->
+<section class="inner-hero d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-md-6 text-center">
+        <h2>{{.Title}}</h2>
+        {{with .Params.hero}}
+        <p>{{.description}}</p>
+        {{end}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Content section-->
+<section class="inner-hero d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-md-9">
+        <article>{{.Content}}</article>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
